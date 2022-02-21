@@ -59,7 +59,7 @@ class cActionUserconfigform extends cAction{
 			$this->m_objTemplate->addData($dummy = array("skin" => $arrSkinList));
 
 			if($objActiveUser->loadDataById($objActiveUser->getId())){					// refresh data
-				$this->m_objTemplate->addData($dummy = array("user" => $objActiveUser->getDataArray()));
+				$this->m_objTemplate->addData($dummy = array("user" => $objActiveUser->getDataArray(NULL, NULL, NULL)));
 			}
 		}
 		else $this->m_objTemplate = &$this->_getErrorTemplateObject(new cError(22));	// not loged in

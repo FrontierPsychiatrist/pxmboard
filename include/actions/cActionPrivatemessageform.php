@@ -91,7 +91,7 @@ class cActionprivatemessageform extends cAction{
 								$objPrivateMessage = new cPrivateMessage();
 								$objPrivateMessage->setDestinationUserId($objActiveUser->getId());
 
-								if($objPrivateMessage->loadDataById($iMessageId)){
+								if($objPrivateMessage->loadDataById($iMessageId, NULL)){
 									$this->m_objTemplate->addData($dummy = array("msg"=>$objPrivateMessage->getDataArray($this->m_objConfig->getTimeOffset()*3600,
 																														 $this->m_objConfig->getDateFormat(),
 																														 $iLastOnline,

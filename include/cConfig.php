@@ -421,6 +421,10 @@ class cConfig{
 		$this->m_objActiveUser = &$objActiveUser;
 	}
 
+	function unsetActiveUser(){
+		$this->m_objActiveUser = NULL;
+	}
+
 	/**
 	 * get active skin
 	 *

@@ -48,11 +48,9 @@ require_once(INCLUDEDIR."/cConfig.php");
 require_once(INCLUDEDIR."/cBoard.php");
 require_once(INCLUDEDIR."/cError.php");
 
-set_magic_quotes_runtime(0);
-
 // initialise random number generator
 list($iMicroSeconds,$iSeconds) = explode(" ",microtime());
-mt_srand((float)$iSeconds+((float)$iMicroSeconds*100000));
+mt_srand((int)$iSeconds+((int)$iMicroSeconds*100000));
 
 // establish db connection
 // global access to dbconnection as emulation for a singleton

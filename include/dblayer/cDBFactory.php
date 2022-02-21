@@ -48,7 +48,7 @@ class cDBFactory{
 	 * @param string $sDbType database type (MySql,PostgreSql,...)
 	 * @return object database connection object
 	 */
-	function &getDBObject($sDbType){
+	static function &getDBObject($sDbType){
 		$objDb = NULL;
 		if(preg_match("/^[a-zA-Z]+$/",$sDbType)){
 			$sDbType = "cDB".$sDbType;

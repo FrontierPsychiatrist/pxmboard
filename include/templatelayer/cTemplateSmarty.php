@@ -31,7 +31,7 @@ require_once(INCLUDEDIR."/lib/Smarty/libs/Smarty.class.php");
  */
 class cTemplateSmarty extends cTemplate{
 
-	var	$m_objSmarty;					// smarty template parser
+	var	Smarty $m_objSmarty;					// smarty template parser
 
 	/**
 	 * Constructor

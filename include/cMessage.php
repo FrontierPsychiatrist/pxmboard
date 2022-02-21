@@ -139,7 +139,7 @@ class cMessage extends cMessageHeader{
  	 * @param object $objParser message parser
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,&$objParser){
+	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser){
 		return array_merge(cMessageHeader::getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser),
 						   array("_body"=>	$objParser->parse($this->getBody()),
 						   		 "ip"	=>	$this->m_sIp));

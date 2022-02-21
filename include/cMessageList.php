@@ -166,7 +166,7 @@ class cMessageList extends cScrollList{
  	 * @param object $objParser message parser
 	 * @return array member variables
 	 */
-	function &getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,&$objParser){
+	 function &getDataArray(?int $iTimeOffset = NULL, ?string $sDateFormat = NULL, ?int $iLastOnlineTimestamp = NULL, ?string $sSubjectQuotePrefix = NULL, ?object $objParser = NULL){
 		$arrReturn = array();
 
 		reset($this->m_arrResultList);

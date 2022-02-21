@@ -52,7 +52,7 @@ class cActionPrivatemessage extends cAction{
 				$objPrivateMessage->setAuthorId($objActiveUser->getId());
 				$objPrivateMessage->setDestinationUserId($objActiveUser->getId());
 
-				if($objPrivateMessage->loadDataById($iMessageId)){
+				if($objPrivateMessage->loadDataById($iMessageId, NULL)){
 
 					$this->m_objTemplate = &$this->_getTemplateObject("privatemessage");
 

@@ -83,7 +83,7 @@
 	 * @param array $arrData key - value pairs
 	 * @return boolean success / failure
 	 */
-	function addData(&$arrData){
+	function addData($arrData){
 		return $this->_addDataRecursive($arrData,"");
 	}
 

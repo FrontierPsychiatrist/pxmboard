@@ -61,7 +61,7 @@ class cPrivateMessage extends cMessage{
 	 * @param integer $iMessageId message id
 	 * @return boolean success / failure
 	 */
-	function loadDataById($iMessageId){
+	function loadDataById($iMessageId, ?int $iBoardId){
 
 		$bReturn = FALSE;
 		$iMessageId = intval($iMessageId);
@@ -357,7 +357,7 @@ class cPrivateMessage extends cMessage{
  	 * @param object $objParser message parser
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,&$objParser){
+	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser){
 		return array_merge(cMessage::getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser),
 						   array("read"=>($this->m_iToState==cMessageStates::messageRead()?"1":"0")));
 	}

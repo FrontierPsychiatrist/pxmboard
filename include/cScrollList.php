@@ -226,10 +226,9 @@ class cScrollList{
 	 * 
 	 * @author Torsten Rentsch <forum@torsten-rentsch.de>
 	 * @access public
-	 * @param void
 	 * @return array member variables
 	 */
-	function &getDataArray(){
+	 function &getDataArray(?int $iTimeOffset = NULL, ?string $sDateFormat = NULL, ?int $iLastOnlineTimestamp = NULL,?string $sSubjectQuotePrefix = NULL, ?object $objParser = NULL){
 		return $this->m_arrResultList;
 	}
 }

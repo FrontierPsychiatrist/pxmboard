@@ -47,7 +47,7 @@ class cUserStates{
 	 * @param void
 	 * @return integer user active value
 	 */
-	function userActive(){
+	static function userActive(){
 		return 1;
 	}
 
@@ -59,7 +59,7 @@ class cUserStates{
 	 * @param void
 	 * @return integer user not activated value
 	 */
-	function userNotActivated(){
+	static function userNotActivated(){
 		return 2;
 	}
 
@@ -71,7 +71,7 @@ class cUserStates{
 	 * @param void
 	 * @return integer user deleted value
 	 */
-	function userDisabled(){
+	static function userDisabled(){
 		return 3;
 	}
 
@@ -83,7 +83,7 @@ class cUserStates{
 	 * @param void
 	 * @return integer user deleted by moderator value
 	 */
-	function userDisabledByMod(){
+	static function userDisabledByMod(){
 		return 4;
 	}
 
@@ -95,7 +95,7 @@ class cUserStates{
 	 * @param void
 	 * @return array user states (key: id; value: name)
 	 */
-	function getUserStates(){
+	static function getUserStates(){
 		 return array(1=>"active",
 			    	  2=>"not activated",
 					  3=>"disabled",

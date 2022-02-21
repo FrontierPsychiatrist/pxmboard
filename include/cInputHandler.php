@@ -67,9 +67,9 @@ class cInputHandler{
 			$sValue = $_GET[$sVarName];
 		}
 
-		if(get_magic_quotes_gpc()){
-			$sValue = stripslashes($sValue);
-		}
+//		if(get_magic_quotes_gpc()){
+//			$sValue = stripslashes($sValue);
+//		}
 		$sValue = str_replace("\r","\n",str_replace("\r\n","\n",$sValue));
 
 		if(strlen($sAddFunction)>0){

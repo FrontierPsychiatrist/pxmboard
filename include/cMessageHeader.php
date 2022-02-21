@@ -59,7 +59,7 @@ class cMessageHeader{
 	 * @param integer $iMessageId message id
 	 * @return boolean success / failure
 	 */
-	function loadDataById($iMessageId){
+	function loadDataById($iMessageId, ?int $iBoardId){
 
 		$bReturn = FALSE;
 		$iMessageId = intval($iMessageId);
@@ -321,7 +321,7 @@ class cMessageHeader{
 	 * @param object $objParser message parser
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,&$objParser){
+	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser){
 		return array("id"		=>	$this->m_iId,
 					 "subject"	=>	$this->getSubject($sSubjectQuotePrefix),
 					 "date"		=>	(($this->m_iMessageTimestamp>0)?date($sDateFormat,($this->m_iMessageTimestamp+$iTimeOffset)):0),

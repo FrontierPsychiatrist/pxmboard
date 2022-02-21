@@ -953,7 +953,7 @@ class cUser{
 	 * @param object $objParser message parser (for signature)
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,&$objParser){
+	function getDataArray($iTimeOffset,$sDateFormat,$objParser){
 		return array(	"id"		=>	$this->m_iId,
 						"nickname"	=>	$this->m_sNickName,
 						"email"		=>	$this->m_sPublicMail,

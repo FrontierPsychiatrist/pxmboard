@@ -47,7 +47,7 @@ class cMessageStates{
 	 * @param void
 	 * @return integer user active value
 	 */
-	function messageNew(){
+	static function messageNew(){
 		return 1;
 	}
 
@@ -59,7 +59,7 @@ class cMessageStates{
 	 * @param void
 	 * @return integer user not activated value
 	 */
-	function messageRead(){
+	static function messageRead(){
 		return 2;
 	}
 
@@ -71,7 +71,7 @@ class cMessageStates{
 	 * @param void
 	 * @return integer user deleted value
 	 */
-	function messageDeleted(){
+	static function messageDeleted(){
 		return 3;
 	}
 
@@ -83,7 +83,7 @@ class cMessageStates{
 	 * @param void
 	 * @return array message states (key: id; value: name)
 	 */
-	function getUserStates(){
+	static function getUserStates(){
 		 return array(1=>"new",
 			    	  2=>"read",
 					  3=>"deleted");

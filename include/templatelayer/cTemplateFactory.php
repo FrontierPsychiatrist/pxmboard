@@ -46,9 +46,9 @@ class cTemplateFactory{
      * @access public
 	 * @param  string $sTemplateType type of the templates
 	 * @param string $sSkinDir skin directory
-	 * @return object template object
+	 * @return cTemplate template object
      */
-	function &getTemplateObject($sTemplateType,$sSkinDir){
+	static function &getTemplateObject($sTemplateType,$sSkinDir): cTemplate{
 		$objTemplate = NULL;
 		if(preg_match("/^[a-zA-Z]+$/",$sTemplateType)){
 			$sTemplateType = "cTemplate".$sTemplateType;

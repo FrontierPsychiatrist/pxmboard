@@ -678,7 +678,7 @@ class cBoard{
 	 * @param object $objParser message parser (for signature)
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,&$objParser){
+	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$objParser){
 		$arrModerators = array();
 		reset($this->m_arrModerators);
 		foreach($this->m_arrModerators as $objUser) {

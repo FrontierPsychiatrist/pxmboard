@@ -39,7 +39,7 @@ class cActionLogout extends cActionBoardlist{
 	 * @return void
 	 */
 	function doPreActions(){
-		$this->m_objConfig->setActiveUser($dummy = NULL);
+		$this->m_objConfig->unsetActiveUser();
 
 		$objSession = &$this->m_objConfig->getSession();
 		$objSession->destroySession();

@@ -167,7 +167,7 @@ class cBoardList{
 	 * @param object $objParser message parser (for signature)
 	 * @return array member variables
 	 */
-	function &getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,&$objParser){
+	function &getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$objParser){
 
 		$arrOutput = array();
 		reset($this->m_arrBoards);

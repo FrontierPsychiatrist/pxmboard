@@ -32,19 +32,19 @@ require_once(INCLUDEDIR."/templatelayer/cTemplateFactory.php");
  */
  class cAction{
 
-	var $m_objConfig;
-	var $m_objTemplate;
-	var $m_objInputHandler;
+	var cConfig $m_objConfig;
+	var ?cTemplate $m_objTemplate;
+	var cInputHandler $m_objInputHandler;
 
 	/**
 	 * Constructor
 	 *
 	 * @author Torsten Rentsch <forum@torsten-rentsch.de>
 	 * @access public
-	 * @param object $objConfig configuration data of the board
+	 * @param cConfig $objConfig configuration data of the board
 	 * @return void
 	 */
-	function __construct(&$objConfig){
+	function __construct(cConfig &$objConfig){
 		$this->m_objConfig = &$objConfig;
 		$this->m_objTemplate = NULL;
 		$this->m_objInputHandler = new cInputHandler();
@@ -152,9 +152,9 @@ require_once(INCLUDEDIR."/templatelayer/cTemplateFactory.php");
 	 * @author Torsten Rentsch <forum@torsten-rentsch.de>
 	 * @access private
 	 * @param string $sTemplateName name of the template
-	 * @return object template
+	 * @return cTemplate template
 	 */
-	function &_getTemplateObject($sTemplateName){
+	function &_getTemplateObject($sTemplateName): cTemplate {
 		$objSkin = &$this->m_objConfig->getActiveSkin();
 		$objTemplate = cTemplateFactory::getTemplateObject($this->m_objConfig->getActiveTemplateEngine(),$this->m_objConfig->getSkinDirectory().$objSkin->getDirectory());
 		$objTemplate->setTemplateName($sTemplateName);
@@ -167,9 +167,9 @@ require_once(INCLUDEDIR."/templatelayer/cTemplateFactory.php");
 	 * @author Torsten Rentsch <forum@torsten-rentsch.de>
 	 * @access private
 	 * @param object $objError error object
-	 * @return object template
+	 * @return cTemplate template
 	 */
-	function &_getErrorTemplateObject($objError){
+	function &_getErrorTemplateObject($objError): cTemplate{
 		$objSkin = &$this->m_objConfig->getActiveSkin();
 		$objTemplate = cTemplateFactory::getTemplateObject($this->m_objConfig->getActiveTemplateEngine(),$this->m_objConfig->getSkinDirectory().$objSkin->getDirectory());
 		$sTemplateName = "error-".strtolower(get_class($this));

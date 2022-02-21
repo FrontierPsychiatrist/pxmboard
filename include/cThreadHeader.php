@@ -322,7 +322,7 @@ class cThreadHeader extends cMessageHeader{
 	 * @param integer $iLastOnlineTimestamp last online timestamp for user
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp){
+	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp, $sSubjectQuotePrefix,$objParser){
 		$objParser = null;
 		return array_merge(cMessageHeader::getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,"",$objParser),
 						   array("threadid"	=>	$this->m_iThreadId,

@@ -65,7 +65,7 @@ class cBoardMessage extends cMessage{
 	 * @return boolean success / failure
 	 */
 	function loadDataById($iMessageId,$iBoardId){
-		return (cMessage::loadDataById($iMessageId) && $this->m_iBoardId == $iBoardId);
+		return (parent::loadDataById($iMessageId, NULL) && $this->m_iBoardId == $iBoardId);
 	}
 
 	/**
@@ -78,7 +78,7 @@ class cBoardMessage extends cMessage{
 	 */
 	function _setDataFromDb(&$objResultRow){
 
-		cMessage::_setDataFromDb($objResultRow);
+		parent::_setDataFromDb($objResultRow);
 
 		$this->m_iBoardId = intval($objResultRow->t_boardid);
 		$this->m_iThreadId = intval($objResultRow->t_id);
@@ -95,7 +95,7 @@ class cBoardMessage extends cMessage{
 		$this->m_objAuthor->setSignature($objResultRow->u_signature);
 
 		$this->m_objReplyMsg = new cMessageHeader();
-		$this->m_objReplyMsg->loadDataById($objResultRow->m_parentid);
+		$this->m_objReplyMsg->loadDataById($objResultRow->m_parentid, NULL);
 		$this->m_bSendNotification = $objResultRow->m_notification?TRUE:FALSE;
 
 		return TRUE;
@@ -496,7 +496,7 @@ class cBoardMessage extends cMessage{
  	 * @param object $objParser message parser
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,&$objParser){
+	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser){
 		return array_merge(cMessage::getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser),
 						   array("notification"	=>	$this->m_bSendNotification,
 						   		 "thread"		=>	array("id"		=>	$this->m_iThreadId,

@@ -71,7 +71,7 @@ class cActionLogin extends cActionBoardlist{
 			}
 		}
 
-		cActionBoardlist::performAction();
+		parent::performAction();
 
 		if(is_object($objError)){
 			$this->m_objTemplate->addData($dummy = array("error"=>$objError->getDataArray()));

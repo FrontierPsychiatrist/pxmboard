@@ -139,17 +139,16 @@ class cThreadList extends cScrollList{
 	 *
 	 * @author Torsten Rentsch <forum@torsten-rentsch.de>
 	 * @access public
-	 * @param integer $iTimeOffset time offset in seconds
-	 * @param string $sDateFormat php date format
-	 * @param integer $iLastOnlineTimestamp last online timestamp for user
+	 * @param ?integer $iTimeOffset time offset in seconds
+	 * @param ?string $sDateFormat php date format
+	 * @param ?integer $iLastOnlineTimestamp last online timestamp for user
 	 * @return array member variables
 	 */
-	function &getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp){
-
+	function &getDataArray(?int $iTimeOffset = NULL, ?string $sDateFormat = NULL, ?int $iLastOnlineTimestamp = NULL, ?string $sSubjectQuotePrefix = NULL, ?object $objParser = NULL){
 		$arrOutput = array();
 		reset($this->m_arrResultList);
 		foreach($this->m_arrResultList as $objThreadHeader) {
-			$arrOutput[] = $objThreadHeader->getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp);
+			$arrOutput[] = $objThreadHeader->getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp, NULL, NULL);
 		}
 		return $arrOutput;
 	}

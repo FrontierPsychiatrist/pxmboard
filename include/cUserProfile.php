@@ -61,7 +61,7 @@ class cUserProfile extends cUser{
 	 */
 	function _setDataFromDb(&$objResultRow){
 
-		cUser::_setDataFromDb($objResultRow);
+		parent::_setDataFromDb($objResultRow);
 
 		$this->m_sSignature	= $objResultRow->u_signature;
 		$this->m_iLastUpdateTimestap = intval($objResultRow->u_profilechangedtstmp);
@@ -88,7 +88,7 @@ class cUserProfile extends cUser{
 	 	foreach(array_keys($this->m_arrAddFields)as $sFieldName){
 			$sAddDbFields .= ",u_profile_".$sFieldName;
 		}
-	 	return cUser::_getDbAttributes().",u_signature,u_profilechangedtstmp".$sAddDbFields;
+	 	return parent::_getDbAttributes().",u_signature,u_profilechangedtstmp".$sAddDbFields;
 	}
 
 	/**
@@ -193,8 +193,8 @@ class cUserProfile extends cUser{
 	 * @param object $objParser message parser (for signature)
 	 * @return array member variables
 	 */
-	function getDataArray($iTimeOffset,$sDateFormat,&$objParser){
-		return array_merge(cUser::getDataArray($iTimeOffset,$sDateFormat,$objParser),
+	function getDataArray($iTimeOffset,$sDateFormat,$objParser){
+		return array_merge(parent::getDataArray($iTimeOffset,$sDateFormat,$objParser),
 						   array("lchange"	=>	(($this->m_iLastUpdateTimestap>0)?date($sDateFormat,($this->m_iLastUpdateTimestap+$iTimeOffset)):0)),
 						   $this->m_arrAddData);
 	}
