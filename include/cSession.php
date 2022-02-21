@@ -71,7 +71,7 @@ class cSession{
 		@session_start();
 		// security: don't allow sessions to be used in different board instances!!!
 		$sScript = $this->getSessionVar("script");
-		if (strcasecmp($sScript, $_SERVER["PHP_SELF"]) != 0) {
+		if ($sScript != NULL && strcasecmp($sScript, $_SERVER["PHP_SELF"]) != 0) {
 			$_SESSION = array();
 			$this->setSessionVar("script", $_SERVER["PHP_SELF"]);
 		}
