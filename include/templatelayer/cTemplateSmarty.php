@@ -50,7 +50,8 @@ class cTemplateSmarty extends cTemplate{
 		$this->m_objSmarty->compile_dir = $sSkinDir."/cache";
 		$this->m_objSmarty->template_dir = $sSkinDir;
 #		$this->m_objSmarty->clear_compiled_tpl();
-		$this->m_objSmarty->security = TRUE;
+		$this->m_objSmarty->enableSecurity();
+		$this->m_objSmarty->muteUndefinedOrNullWarnings();
 	}
 
 	/**
