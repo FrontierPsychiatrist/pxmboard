@@ -56,15 +56,15 @@
 <tr class="bg1">
 	<td colspan="2" align="center" id="header">board: {$config.items} gefundene nachrichten</td>
 </tr>
-{foreach from=$msg item=msg}
+{foreach $msg as $_msg}
 <tr class="bg2">
-	<td id="norm" colspan="2"><a href="pxmboard.php?mode=message&brdid={$msg.boardid}&msgid={$msg.id}{$config.sid}" target="bottom" onclick="ld({$msg.boardid},{$msg.threadid},{$msg.id})">{$msg.subject}</a> von
-	<span class="{if $msg.user.highlight == 1}highlight{/if}">
-	{$msg.user.nickname}
+	<td id="norm" colspan="2"><a href="pxmboard.php?mode=message&brdid={$_msg.boardid}&msgid={$_msg.id}{$config.sid}" target="bottom" onclick="ld({$_msg.boardid},{$_msg.threadid},{$_msg.id})">{$_msg.subject}</a> von
+	<span class="{if $_msg.user.highlight == 1}highlight{/if}">
+	{$_msg.user.nickname}
 	</span>
-	am {$msg.date}
-	{if $msg.score>0}
-	(Relevanz: {$msg.score})
+	am {$_msg.date}
+	{if $_msg.score>0}
+	(Relevanz: {$_msg.score})
 	{/if}</td>
 </tr>
 {/foreach}

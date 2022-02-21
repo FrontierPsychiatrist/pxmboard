@@ -1,4 +1,4 @@
-{template name="message"}
+{function name="message"}
 <tr class="bg2"><td valign="middle"><table cellspacing="0" cellpadding="0" border="0">
 <tr><td>{$msg._img}</td>
 <td id="norm">
@@ -12,9 +12,9 @@
 	</span>
 </td></tr></table></td></tr>
 	{foreach from=$msg.msg item=msgpart}
-		{calltemplate name="message" msg=$msgpart}
+		{call name="message" msg=$msgpart}
 	{/foreach}
-{/template}
+{/function}
 <html>
 <head>
 	<meta http-equiv="cache-control" content="no-cache"/>
@@ -54,7 +54,7 @@
 	{/if}
 	</tr></table></td></tr>
 	{foreach from=$thread.msg[0].msg item=msgpart}
-		{calltemplate name="message" msg=$msgpart}
+		{call name="message" msg=$msgpart}
 	{/foreach}
 </table>
 {/if}

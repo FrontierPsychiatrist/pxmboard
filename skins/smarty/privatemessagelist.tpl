@@ -27,13 +27,13 @@
 <tr class="bg1">
 	<th id="header">thema</th><th id="header">{if $config.type == 'outbox'}empf&auml;nger{else}autor{/if}</th><th id="header">datum</th>
 </tr>
-{foreach from=$msg item=msg}
+{foreach $msg as $_msg}
 <tr class="bg2">
-<td id="norm"><a href="pxmboard.php?mode=privatemessage&type={$config.type}&msgid={$msg.id}{$config.sid}">{$msg.subject}</a></td><td id="norm">
-<span class="{if $msg.user.highlight == 1}highlight{/if}">
-{$msg.user.nickname}
+<td id="norm"><a href="pxmboard.php?mode=privatemessage&type={$config.type}&msgid={$_msg.id}{$config.sid}">{$_msg.subject}</a></td><td id="norm">
+<span class="{if $_msg.user.highlight == 1}highlight{/if}">
+{$_msg.user.nickname}
 </span>
-</td><td align="right" id="norm">{$msg.date}</td>
+</td><td align="right" id="norm">{$_msg.date}</td>
 </tr>
 {/foreach}
 <tr class="bg1">

@@ -22,8 +22,8 @@
 <tr class="bg2">
 	<td id="norm">skin</td><td id="input"><select name="skinid" size="1">
 	<option value="0">default</option>
-{foreach from=$skin item=skin}
-	<option value="{$skin.id}"{if $skin.id == $user.skin} selected="selected"{/if}>{$skin.name}</option>
+{foreach $skin as $_skin}
+	<option value="{$_skin.id}"{if $_skin.id == $user.skin} selected="selected"{/if}>{$_skin.name}</option>
 {/foreach}
 	</select>
 	</td>

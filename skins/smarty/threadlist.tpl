@@ -73,7 +73,7 @@
 	<th id="header"><a href="pxmboard.php?mode=threadlist&brdid={$config.board.id}&date={$config.timespan}&sort=last{$config.sid}">letzter beitrag</a></th>
 </tr>
 
-{foreach from=$thread item=thread}
+{foreach $threads as $thread}
 <tr class="bg2">
 {if $thread.fixed == 1}
 	<td align="center"><img src="images/fixed.gif" width="15" height="15"/></td>

@@ -21,10 +21,10 @@
 {/if}
 </font></td>
 </tr>
-{foreach from=$error item=error}
+{foreach $error as $_error}
 	<tr class="bg1">
-		<td id="norm" align="right">fehler {$error.id}</td>
-		<td id="norm">{$error.text}</td>
+		<td id="norm" align="right">fehler {$_error.id}</td>
+		<td id="norm">{$_error.text}</td>
 	</tr>
 {/foreach}
 {if $config.logedin != 1 && ($config.guestpost || $config.quickpost)}

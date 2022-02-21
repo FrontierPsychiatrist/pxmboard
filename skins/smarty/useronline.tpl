@@ -14,22 +14,22 @@
 <tr class="bg2">
 	<td colspan="2" align="center" id="header">{$users.all} Benutzer online ({$users.visible} sichtbar - {$users.invisible} versteckt)</td>
 </tr>
-{foreach from=$user item=user key=key name=userlist}
+{foreach from=$user item=_user key=key name=userlist}
 	{if $smarty.foreach.userlist.last}
 		{if $key mod 2}
-			<td id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$user.nickname}</a></td>
+			<td id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$_user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$_user.nickname}</a></td>
 		{else}
 			<tr class="bg2">
-			<td colspan="2" align="center" id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$user.nickname}</a></td>
+			<td colspan="2" align="center" id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$_user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$_user.nickname}</a></td>
 		{/if}
 		</tr>
 	{else}
 		{if $key mod 2}
-			<td id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$user.nickname}</a></td>
+			<td id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$_user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$_user.nickname}</a></td>
 			</tr>
 		{else}
 			<tr class="bg2">
-			<td id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$user.nickname}</a></td>
+			<td id="norm"><a href="pxmboard.php?mode=userprofile&brdid={$config.board.id}&usrid={$_user.id}{$config.sid}" target="_blank" onclick="openProfile(this);return false;">{$_user.nickname}</a></td>
 		{/if}
 	{/if}
 {/foreach}

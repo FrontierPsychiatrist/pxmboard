@@ -73,7 +73,7 @@ require_once(INCLUDEDIR."/parser/cParser.php");
 						 																	 "nextid"=>$objThreadList->getNextPageId()),
 												 									   $this->getBannerCode($iIdBoard))));
 
-			$this->m_objTemplate->addData($dummy = array("thread"=>$objThreadList->getDataArray($this->m_objConfig->getTimeOffset()*3600,
+			$this->m_objTemplate->addData($dummy = array("threads"=>$objThreadList->getDataArray($this->m_objConfig->getTimeOffset()*3600,
 																	   							$this->m_objConfig->getDateFormat(),
 																							    $iLastOnline)));
 			$objParser = new cParser();	// dummy parser
