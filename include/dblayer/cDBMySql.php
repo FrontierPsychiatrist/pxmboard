@@ -42,8 +42,8 @@ class cDBMySql extends cDB{
 	 * @return boolean success / failure
 	 */
 	function connectDBServer($sHostName = "localhost",$sUserName = "defaultuser",$sPassword = "",$sDBName = ""){
-		if($this->m_resDBLink = @mysql_connect($sHostName,$sUserName,$sPassword)){
-			if(@mysql_select_db($sDBName,$this->m_resDBLink)){
+		if($this->m_resDBLink = @mysqli_connect($sHostName,$sUserName,$sPassword)){
+			if(@mysqli_select_db($this->m_resDBLink, $sDBName)){
 				return TRUE;
 			}
 		}
@@ -79,17 +79,17 @@ class cDBMySql extends cDB{
 				}
 			}
 
- 			if($mResult = @mysql_query($sQuery,$this->m_resDBLink)){
-				if(!is_resource($mResult)){
+ 			if($mResult = @mysqli_query($this->m_resDBLink, $sQuery)){
+				if(!($mResult instanceof mysqli_result)){
 					$mResult = NULL;
 				}
 				$objResultSet = new cDBMySqlResultSet($mResult);
-				$objResultSet->setAffectedRows(@mysql_affected_rows($this->m_resDBLink));
+				$objResultSet->setAffectedRows(@mysqli_affected_rows($this->m_resDBLink));
 				return $objResultSet;
 			}
 			else{
-		 		$this->m_iLastErrorId		= mysql_errno();
- 				$this->m_sLastErrorMessage	= mysql_error();
+				$this->m_iLastErrorId		= mysqli_errno($this->m_resDBLink);
+				$this->m_sLastErrorMessage	= mysqli_error($this->m_resDBLink);
 				$this->_handleError("couldn't execute query");
 				return NULL;
 			}
@@ -106,7 +106,7 @@ class cDBMySql extends cDB{
 	 * @return integer insert id
 	 */
 	function getInsertID($sTableName,$sColumnName){
-		return mysql_insert_id($this->m_resDBLink);
+		return mysqli_insert_id($this->m_resDBLink);
 	}
 
 	/**
@@ -118,7 +118,7 @@ class cDBMySql extends cDB{
 	 * @return void
 	 */
  	function disconnectDBServer(){
- 		@mysql_close($this->m_resDBLink);
+ 		@mysqli_close($this->m_resDBLink);
 	}
 
 	/**
@@ -142,7 +142,7 @@ class cDBMySql extends cDB{
 	 * @return string db version
 	 */
  	function getDBVersion(){
-		return mysql_get_server_info();
+		return mysqli_get_server_info($this->m_resDBLink);
 	}
 
 	/**
@@ -192,7 +192,7 @@ class cDBMySqlResultSet extends cDBResultSet{
 	 * @return object result row
 	 */
 	function getNextResultRowObject(){
-		return mysql_fetch_object($this->m_resResultSet);
+		return mysqli_fetch_object($this->m_resResultSet);
 	}
 
 	/**
@@ -204,7 +204,7 @@ class cDBMySqlResultSet extends cDBResultSet{
 	 * @return array result row
 	 */
 	function getNextResultRowAssociative(){
-		return mysql_fetch_array($this->m_resResultSet,MYSQL_ASSOC);
+		return mysqli_fetch_array($this->m_resResultSet,MYSQLI_ASSOC);
 	}
 
 	/**
@@ -216,7 +216,7 @@ class cDBMySqlResultSet extends cDBResultSet{
 	 * @return array result row
 	 */
 	function getNextResultRowNumeric(){
-		return mysql_fetch_array($this->m_resResultSet,MYSQL_NUM);
+		return mysqli_fetch_array($this->m_resResultSet,MYSQLI_NUM);
 	}
 
 	/**
@@ -228,7 +228,7 @@ class cDBMySqlResultSet extends cDBResultSet{
 	 * @return boolean success / failure
 	 */
 	function setResultPointer($iRowId = 0){
-		if (@mysql_data_seek($this->m_resResultSet,$iRowId)){
+		if (@mysqli_data_seek($this->m_resResultSet,$iRowId)){
 			return TRUE;
 		}
 		else{
@@ -245,7 +245,7 @@ class cDBMySqlResultSet extends cDBResultSet{
 	 * @return integer number of rows
 	 */
 	function getNumRows(){
-		return mysql_num_rows($this->m_resResultSet);
+		return mysqli_num_rows($this->m_resResultSet);
 	}
 
 	/**
@@ -281,7 +281,7 @@ class cDBMySqlResultSet extends cDBResultSet{
 	 * @return void
 	 */
 	function freeResult(){
-		mysql_free_result($this->m_resResultSet);
+		mysqli_free_result($this->m_resResultSet);
 	}
 }
 ?>
