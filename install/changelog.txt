@@ -1,0 +1,293 @@
+2.5.1 (Juni 2007)
++ upgrade auf Smarty 2.6.18
+
+2.5.0 (März 2006)
++ bugfix: löschen eines forums funktioniert nicht
++ bugfix: Speichern der Threadgfx fuer Skins im Adminbereich
++ bugfix: stripslashes auch für arrays (u.a. skin edit)
++ bugfix: in geschlossenen foren kann noch gepostet werden
+
++ PHP5 Kompatibilität (u.a. Smarty Rekursion überarbeitet)
++ SkinId nicht mehr einzelnen Boards zuweisbar
++ upgrade auf Smarty 2.6.13
++ StringValidations für Eingabevalidierung
++ Trennung privater Nachrichten vom Setup (Skin Änderung)
++ OutBox für private Nachrichten
++ Umstellung auf MySQL Volltextsuche
++ Auswahl der zu durchsuchenden Foren für Beitragssuche
++ Auswahl der zu durchsuchenden Zeitspanne für Beitragssuche
++ Anzeige der Relevanz der Suchergebnisse
++ Anzeige der letzten 10 Suchen auf Suchseite
++ Anzeige der neuesten Beträge im Boardindex
++ Neue quote Methode in DB Klasse & globales DB Objekt umbenannt
++ Keine Mailbenachrichtigung bei Antworten auf eigene Beiträge
++ Bereitstellung erweiterter Informationen in den Nachrichten (Bild,Registrierungsdatum etc.)
++ Signaturen werden erst bei der Anzeige hinzugefügt
++ Anzeige der Signatur durch Nutzer konfigurierbar
++ Neue Formatierungsoption strikeout
++ Login über den query String deaktiviert
+
++ Betaversion pxmboard Installer
+
+
+2.2.2 (August 2003)
++ bugfix: query mit AND statt && an diversen Stellen
++ upgrade auf smarty 2.6.0
+
+
+2.2.1 (Januar 2003)
++ db resultset klassen direkt in db klassen integriert -> 2 includes weniger
++ auswahl der threadlist sortierungen fuer adminuserform ergaenzt
++ cookie funktionalitaet in session klasse integriert
++ getBody fuer nachrichten beschleunigt
++ login by ticket auf jeder seite verfuegbar
++ bugifx: skin einstellung des nutzers wird erst nach reload aktiv
++ bugfix: sonderzeichen werden bei preview einer nachricht mit xsl templates nicht mehr doppelt escaped
++ bugfix: Template error-cactionuserchangepwdsave in error-cactionuserchangepwd umbenannt
++ unterstuetzung fuer png bilder beim verlinken in nachrichten
++ neue config einstellung privatemessagesperpage
++ bugfix: public mail eines nutzers kann leer sein
++ bugfix: auswahl der skins fuer einen nutzer im admintoool
+
+2.2.0
++ bugfix: ersetzung von leerzeichen durch &nbsp;
++ bugfix: fixierte threads werden auch angezeigt wenn sie ausserhalb der anzeigezeitspanne liegen
++ bugfix: sid tag in url berichtigt (privatemessage.xsl)
++ modus "message" kann optional passenden thread anzeigen (url parameter showthread=1) -> 2 frame forum moeglich
++ optional email benachrichtigung bei neuen privaten nachrichten
++ optional email benachrichtigung bei antworten auf eigene beitraege
++ login per cookie auch fuer mode=board
++ modus "messagelist" fuer gaestebuchansicht eines threads
++ bugfix: anzeige der nachricht bei fehlermeldung beim nachrichten speichern
++ bugfix: nickname und userid werden im fehlerfall korrekt uebergeben (private nachricht versenden)
++ bugfix: anzeige des fehlers (z.B. subject fehlt) korrigiert (private nachricht versenden)
++ bugfix: waehlt ein benutzer die default sortierung wird die einstellung des boards verwendet
++ neue sortiermodi "views", "replies", "nickname" und "subject" fuer threadliste hinzugefuegt
++ auswahl der moderierten boards bei der adminansicht fuer einen nutzer
++ js abfrage beim setzten des admin flags und beim abspeichern eines nutzers im adminformular
++ blaettern des flatviews
++ aendern der privaten mail adresse (neues db feld u_registrationmail)
+
+2.1.0
++ Sortierung der Installierten Boards
++ Pre- und Postactions
++ Sortierung der fehler nach id
++ Passwoerter in DB md5 verschluesseln
++ Ueberarbeitung der Passwort zusenden Funktionalitaet
++ mailtextverwaltung auf separate seite und in separate tabelle (pxm_notification)
++ bugfix: loeschen einer nachricht
++ bugfix: sql fehler beim loeschen ueber admintool falls keine threads gefunden
++ bugfix: bild loeschen durch benutzer
++ bugfix: speichern des onlinelisten flags in userconfig
++ mehrzeilige registrierungs ablehnungsgruende moeglich
++ %reason% variable fuer platzierung des grundes im mail body
++ bugfix: anzeige der nutzersignatur fuer neue nachrichten im smarty templatesatz
++ bugfix: javascriptfehler in nachrichtenformularen (document.forms[0].send not defined)
+
+2.0.0
++ (admintool) anzeige der nutzer nach bestimmten kriterien
++ db connect und resultset in separate klassen
++ klassenkonzept und programmstruktur komplett ueberarbeitet
++ forbidden mails,Textreplacement und Badword auf jeweils eigene Seite im Admintool
++ getMetaType(string|number) für DB Felder
++ auf pconnect umgestellt
++ bugfix: ]]> im beitrag fuehrt zu fehlern -> htmlspecialchars statt cdata verwenden
++ messagebody parser optimiert (formatierungszeit um ca. 60% reduziert)
++ nachrichten fuer thread in unterarray "msg", nicht mehr direkt darunter mit id
++ bugfix: brdid und thrdid passen nicht zwingend zusammen (user gibt thrdid aus gesperrten forum an, dazu offene (andere) brdid)
++ unterstuetzung fuer dom xslt und smarty -> templace factory
++ config bereich in template neu gegliedert (user,board,skin)
++ diverse template tags in passende bereiche verschoben (signature nun in config/user usw.)
++ spezielle errortemplates (error-klassenname) koennen allgemeines template ueberschreiben
++ threads splitten
++ subthread loeschen
++ bugfix: parent id und thread id passen bei insert nicht zwingend zusammen
++ ticket system für permanentes login
++ passwortloser modus
++ quickpost und passwortlos jeweils schalter in config
++ webmaster mail in config
++ root folder fuer skins in pxmboard umbenennen,nicht mehr skin abhaengig
++ bold, italic und underline buttons auch fuer mozilla
++ preview mit eigenem button statt checkbox
++ skin dir in config ablegen
++ parse url,style in general config fuer private nachrichten
++ u_profile_xxx fuer additional profile fields
++ fulltextsearch fuer mysql
++ disable-output-escaping in value of fuer banner etc verwenden
++ parsestyle und parseurl in general config dialog + auswertung fuer private messages
++ usedirectregistration und guestpost schalter in config bereich fuer template
++ banner koennen editiert werden
++ skinedit
++ separates admin login (mode=admframe)
++ session id als config an skins
++ bugfix: dom xml stellt leere elemente falsch dar (textarea in registration, javascript etc.) -> als workaround <xsl:comment/> eingefuegt
++ sperren von nutzern durch moderatoren
++ beitrag editieren so lange noch keine antwort vorhanden
+
+3.1.2003
++ Bugfix: Schriftgroesse wird von userklassen nicht mehr ausgewertet
++ mehr nutzerstati eingefuehrt (update der usertabelle!!! u_active wird zu u_state -> 0 wird zu 2)
++ neue methode in config (getUserStates) -> dummy Implementierung
++ tool zur Anzeige der Nutzer ueberarbeitet -> an neue Stati angepasst
++ cUserIndex.class entfernt
++ userprofile.xsl angepasst -> user/state statt user/active
+
+20.11.2002
++ Bugfix: config/nick nun unter config/user/nick um ueberschneidung mit usersuche zu verhindern
++ Bugfix: wird nur das cookie flag in den Einstellungen geaendert kommt nun beim speichern keine Fehlermeldung mehr
++ Bugfix: PXM Skin -> userlist active flag wird korrekt geprueft
+
+11.10.2002
++ brdid an movethread uebergeben um sicherzustellen das der thread auch im passenden board liegt (moderatoren können nicht mehr die brdid faken)
++ statt u_login -> u_active; flag wird bei freischaltung gesetzt
++ anzeige ob ein nutzer aktiv ist in allen templates verfügbar (in messages selbst nur dummy)
+  ALTER TABLE px_user CHANGE u_login u_active TINYINT(3) UNSIGNED DEFAULT '0' NOT NULL
+
+9.10.2002
++ Schriftgroeße aus config entfernt (laesst sich im Browser manipulieren und ist daher unnoetig)
++ cUserConfig Objekt wird direkt in session abegelegt
++ user werden in onlineliste angezeigt falls sie quickpost verwenden
++ moderatoren können threads verschieben
++ nachrichten lassen sich als wichtig kennzeichnen (neue DB Spalte t_important in px_thread)
+
+18.9.2002
++ Bugfix Banneranzeige
+
+14.9.2002
++ Banner in usersuche,onlineliste,msgsuche und msgliste
++ brdname in config (xml)
++ admin funktion clean db nicht mehr für postgresql verfügbar
++ diverse js für skins
++ output compression entfernt -> bei Bedarf zlib.output_compression in php.ini aktivieren
+
+31.8.2002
++ cDBBuilder in cDBFactory umbenannt und Klassen entsprechend angepasst
+
+25.8.2002
++ getDBType in cDB und abgeleiteten Klassen
+
+16.8.2002
++ parameter thrdid und msgid können bei mode=brd übergeben werden => durchgeschleift nach config/thrdid & config/msgid
+
+10.8.2002
++ ThreadID auf Bestätigungsseiten für das Speichern einer Nachricht
++ Bugfix: Zeitzone (Benutzer- und Servereinstellung überschreiben sich nicht mehr)
++ cTemplate erkennt die installierte php Version und spricht die xslt extension entsprechend an
++ DB Abstraktion mit Builder
+  + PostgreSql Unterstützung
+    + SQL: Limit abstrahiert
+    + Tabellen für SQL Kompatibilität umbenannt ->  "px_" prefix
+    + ODER BY RAND() durch PHP rand() ersetzt -> PostgreSQL Kompatibilität
+    + getInsertId() erhält Parameter table und column
++ Bugfix: Anzeige der vorhandenen Boards nach öffnen bzw. schliessen eines Boards
+
+
+21.7.2002
++ nickname des eingeloggten users in allen templates verfügbar (config/nick)
++ neuestes mitglied des Forums wird in brdidx angezeigt (newestmember/user)
++ textreplacement optional -> neue Spalten in DB:
+  ALTER TABLE user ADD u_repltext tinyint(3) unsigned  NOT NULL default '1';
+  ALTER TABLE board ADD b_repltext tinyint(3) unsigned  NOT NULL default '1';
++ brdidx in template in unterordner boards verschoben (board -> boards/board)
+
+
+28.6.2002
++ Geschwindigkeit des Threadsaufbaus ca. um Faktor 10 verbessert (cThread.class)
+
+19.6.2002
++ Markierung neuer Nachrichten
+
+7.6.2002
++ u_highlight fuer user- und onlineliste
+
+31.5.2002
++ visible flag in usertabelle (versteckt in who's online liste)
++ Auswertung von visible und nicht visible in who's online
+
+9.5.2002
++ autoclose threads ab bestimmter anzahl nachrichten (cBoardMessage,cConfig,main-admin,main-msg)
++ Zeichen fuer neue Private mails (neue spalte "gelesen")
++ unbuffered mysql_query fuer thread
+
+5.5.2002
++ Key fuer onlinezeit der usertabelle hinzugefuegt
+
+4.5.2002
++ Übergabe per Referenz wo immer möglich
++ foreach durch while/list/each ersetzt wo noetig (benoetigt keinen Speicher fuer Kopie -> Threadindex)
+
+3.5.2002
++ Gesperrte user die noch eingeloggt sind koennen weiterhin posten (cUser an Boardmessage übergeben)
++ Einstellungen aendern nach Passwortaenderung ?! (betrifft aenderung der userdaten:profile,config,passwort)
+
+1.5.2002
++ ]]>  <![CDATA[   summiert sich da es bei Textreplacement mit angezeigt (cConfig + cMessage)
++ mode in error template (pxmboard)
+
+2.4.2002
++ nl2br (z.B. Banner) und <pre> (profil) zur Darstellung von Zeilenunbrüchen
++ bugfix textreplacement ersetzt auch in link Bereichen
+
+29.3.2002
++ bugfix Monatsauswahl (main-admin)
++ bugfix getRandomBanner mit Zeitlimit (cBanner)
+
+21.3.2002
++ link auf mailhost im admintool
+
+18.3.2002
++ ip Anzeige fuer Nachrichten (admin + mod)
++ preview beim posten
+
+24.2.2002
++ kein cData fuer Banner
+
+17.2.2002
++ bugfix cMessage (/ fuer imagetag)
++ bugfix cTemplate (cData Bereich optional)
++ cData fuer getTextreplacement
+
+14.2.2002
++ body einer nachricht und img in thread -> entities nun durch xsl ersetzt
++ xsl copy-of statt value-of und disable outputescaping fuer body und img
++ -> kompatibel zu neuem sablotron
++ bugfix ungeschlossener quotepraefix falls am ende
+
+8.2.2002
++ bugfix verschieben von threads
++ bad word beim posten ersetzen (effizienter)
++ bad word in subjects ersetzen
++ bold / italic / underlined / link / img buttons fuer ie user beim posten im skin
++ quotechar parameter in config (db eintrag dafuer entfaellt in tabelle skin)
++ quotesubject parameter in config
+
+1.2.2002
++ setdata fuer user bei Registrierung verwendet
++ login in cookie speichern
+
+31.1.2002
++ decode entfernt
+
+29.1.2002
++ updonlinetime entfernt (DB Spalte configuration: c_updonltime entfaellt)
+  wird nun von onlineTime gesteuert
+
+28.1.2002
++ getArrFormVar ueberarbeitet (pxmboard)
+
+26.1.2002
++ Startdatum fuer bannerrotation (DB Spalte banner: ba_start, index auf ba_boardid)
++ Verschieben von Threads
+
+24.1.2002
++ unique priv mail optional (DB Spalte configuration: c_uniquemail)
++ banner rotation in eigene Klasse cBanner.php
++ Banner Ablaufdatum und max Views (DB Spalten banner: ba_expiration,ba_views,ba_maxviews)
+
+14.1.2002
++ Schalter für Banner Rotation in cConfig
++ Anpassung main-admin
+
+13.1.2002
++ bugfix cMessage (italic,bold,underline oeffnen/schliessen)
++ Banner Rotation

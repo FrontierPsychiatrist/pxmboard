@@ -1,0 +1,15 @@
+Systemvoraussetzungen:
+
+1. Webserver mit PHP Version 4.1 oder höher
+2. MySQL Version 4.0 oder höher
+
+Installationsanleitung:
+
+1. Dateien auf Sever entpacken
+2. Die Verzeichnisse "skins/smarty/cache" und "images/profile" für Schreibzugriffe durch den Webserver freigeben
+3. Neue MySQL Datenbank anlegen (z.B. pxmboard)
+4. Datenbankscript unter "pxmboard\install\sql" ausführen (z.B. mittels PHPMyAdmin)
+5. *server*/pxmboard/install/install.php aufrufen und entsprechend ausfüllen
+   Achtung: das Installationsscript schreibt eine Konfigurationsdatei nach *server*/pxmboard/
+6. *server*/pxmboard/pxmboard.php aufrufen und als soeben angelegter Nutzer einloggen
+7. In der Administration (weitere Funktionen) die relevanten Einstellungen - insbesondere Mailtexte - anpassen

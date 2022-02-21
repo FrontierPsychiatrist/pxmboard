@@ -1,0 +1,80 @@
+bugs ?:
+  - Probleme mit PostgreSQL (clean database usw.)
+  +- pruefung der eingabelaengen im admintool
+  - bei fehleingabe im nachrichtenformular wird auf der fehlerseite das subject nicht mehr korrekt angezeigt
+
+features:
+
+  - Neuer DBLayer für PHP5 Mysql Extension
+  - Voting
+  - Volltextsuche für PostgreSQL nachziehen
+  - Auslagerung von Badwordfilter in filter Klasse prüfen
+
+  - Redaktionierung der Beiträge (Freischaltung durch Redakteur)
+  - eventuell eigener gastnutzer in userdb fuer nicht eingeloggte user mit entsprechenden einstellungen (signaturen etc)
+
+  - Logging Mechanismus (Fehler, DB Queries etc)
+
+  - smtp klasse für mass mailings (PEAR MAIL prüfen)
+
+  - private nachricht an autor falls thread verschoben
+  - email falls nutzer gesperrt
+
+  - skin fuer move thread
+
+  - zuklappbare subthreads (javascript)
+  - vcard download aus profil; vcard voreinstellungen fuer anmeldung
+
+  - sidebar fuer entsprechende browser
+    - aktuellste threads/nachrichten
+    - x user eingeloggt
+    - threads zur sidebar hinzufügen/aus sidebar entfernen Funktion (Threadüberwachung)
+
+  - Internationalisierung (i18n o.ä.)
+  - Rechtschreibprüfung für Nachrichten (php pspell extension)
+
+  - untergruppen fuer foren (gruppenspalte fuer boardtabelle -1=gruppe 0=ohne gruppe)
+  - Beiträge bewerten
+
+  - private messages per mail zusenden (option) bzw. ganz abschalten (option)
+  - zeilen / seite durch user festlegbar
+  - File Upload
+  - threadbenachrichtigung
+  - messages per mail an freunde verschicken/empfehlen
+  - download kompletter threads als zipfile
+  - Archiv
+  - buddy list (einladungen etc)
+  - filter (nichts von bestimmten nutzern anzeigen etc)
+  - Ignore Liste
+  - Geburtstage speichern und private nachricht "happy brithday"
+  - communitybetreuung
+    - newsletter an nutzer eines forums bzw. aller foren
+    - alternativ als private message
+    - abschaltbar durch nutzer
+    - mail an nutzer die lange nicht online waren, nutzer eines boards/threads etc.
+
+
+
+ Suche
+  - Anzeige ähnlicher Threads (automatische suche)
+  - suche nach threads (messages des threads in suchliste aufklappbar)
+
+ Administration/Moderation
+  - anzeige der admins im system (admintool)
+  - anzeige der mods im system
+  - anzeige der autoren nach ip
+  - nutzer fuer eine bestimmte zeit sperren
+  - default rechte fuer neue nutzer ueber general config einstellbar
+  - zusenden eines neuen passwortes durch admin
+  - text feld in nutzer tabelle "adminanmerkungen" um z.B. sperrgründe eintragen zu können
+  - threads zusammenfuehren
+
+ Geschwindigkeit
+  - dom xml dokument im speicher aufbauen, nicht erst xml file generieren
+  - html ausgabecache
+  - thread und messagetabelle fuer jedes forum separat (speed+HWanforderungen)
+  - text  (body) in separate tabelle fuer erhoehte performance
+
+ Sicherheit
+  - Benutzergruppen mit bestimmten Rechten
+  - foren nur fuer angemeldete nutzer lesbar, bzw. nur fuer bestimmte nutzergruppen

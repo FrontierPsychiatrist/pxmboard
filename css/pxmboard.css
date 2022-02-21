@@ -1,0 +1,18 @@
+BODY { font-family:arial,helvetica,sans-serif;background-color:#000000;color:#FFFFD0 }
+TD,TH { font-family:arial,helvetica,sans-serif }
+A:link { text-decoration:none;color:#FEFF7D }
+A:visited { text-decoration:none;color:#FFFFD0 }
+A:active { text-decoration:none;color:#FF0000 }
+#norm { font-size:10pt }
+#header { font-size:12pt }
+#input { font-size:10pt; font-family:Times }
+
+/* highlight user */
+.highlight { color:#FF0000 }
+
+/* highlight own entries */
+.own { font-weight:bold }
+
+/* background colors for table cells */
+.bg1 {background-color:#000050 }
+.bg2 {background-color:#000030 }
