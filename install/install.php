@@ -63,7 +63,7 @@ else{
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 <table border="1" id="c">
 <tr><td colspan="2" id="h">Database Configuration</td></tr>
-<tr><td rowspan="2">DB Type</td><td><input type="radio" name="dbtype" value="MySql" <?php echo getCheckboxStateString("mysql")?>> MySql</td></tr>
+<tr><td rowspan="2">DB Type</td><td><input type="radio" name="dbtype" value="MySql" <?php echo getCheckboxStateString("mysqli")?>> MySql</td></tr>
 <tr>							<td><input type="radio" name="dbtype" value="PostgreSql" <?php echo getCheckboxStateString("pgsql")?>> PostgreSql</td></tr>
 
 <tr><td>host</td><td><input type="text" name="host" value="localhost"></td></tr>
