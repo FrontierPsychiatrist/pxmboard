@@ -714,9 +714,10 @@ class cUser{
 
 		if($this->_isValidEmail($sRegistrationMail)){
 			reset($arrForbiddenMails);
- 			while($bReturn && (list(,$sMailPart)=each($arrForbiddenMails))){
+			foreach ($arrForbiddenMails as $sMailPart) {
 				if(preg_match("/".$sMailPart."$/",$sRegistrationMail)){
 					$bReturn = FALSE;
+					break;
 				}
 			}
 			if($bReturn){

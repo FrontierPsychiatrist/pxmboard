@@ -220,7 +220,7 @@ class cUserAdmin extends cUserProfile{
 
 		if($objDb->executeQuery("DELETE FROM pxm_moderator WHERE mod_userid=$this->m_iId")){
 			reset($this->m_arrModeratedBoards);
-			while(list(,$objBoard) = each($this->m_arrModeratedBoards)){
+			foreach ($this -> m_arrModeratedBoards as $objBoard) {
 				$objDb->executeQuery("INSERT INTO pxm_moderator (mod_boardid,mod_userid) VALUES (".$objBoard->getId().",$this->m_iId)");
 			}
 		}

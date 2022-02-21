@@ -92,7 +92,7 @@ class cSearchProfileList{
 
 		$arrOutput = array();
 		reset($this->m_arrSearchProfiles);
-		while(list(,$objSearchProfile) = each($this->m_arrSearchProfiles)){
+		foreach ($this -> m_arrSearchProfiles as $objSearchProfile) {
 			$arrOutput[] = $objSearchProfile->getDataArray($iTimeOffset,$sDateFormat);
 		}
 		return $arrOutput;

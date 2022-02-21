@@ -184,7 +184,7 @@ class cBoard{
 
 		if($objDb->executeQuery("DELETE FROM pxm_moderator WHERE mod_boardid=$this->m_iId")){
 			reset($this->m_arrModerators);
-			while(list(,$objUser) = each($this->m_arrModerators)){
+			foreach($this->m_arrModerators as $objUser) {
 				$objDb->executeQuery("INSERT INTO pxm_moderator (mod_userid,mod_boardid) VALUES (".$objUser->getId().",$this->m_iId)");
 			}
 		}
@@ -681,7 +681,7 @@ class cBoard{
 	function getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,&$objParser){
 		$arrModerators = array();
 		reset($this->m_arrModerators);
-		while(list(,$objUser) = each($this->m_arrModerators)){
+		foreach($this->m_arrModerators as $objUser) {
 			$arrModerators[] = $objUser->getDataArray($iTimeOffset,$sDateFormat,$objParser);
 		}
 

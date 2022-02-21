@@ -144,7 +144,7 @@ class cInputHandler{
 		}
 
 		if($sAddFunction || $sValidationMethodName || get_magic_quotes_gpc()){
-			while(list($mKey,$mVal) = each($arrValues)){
+			foreach ($arrValues as $mKey => $mVal) {
 				if(get_magic_quotes_gpc()){
 					$arrValues[$mKey] = stripcslashes($mVal);
 				}

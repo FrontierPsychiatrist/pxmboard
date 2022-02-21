@@ -148,7 +148,7 @@ class cThreadList extends cScrollList{
 
 		$arrOutput = array();
 		reset($this->m_arrResultList);
-		while(list(,$objThreadHeader) = each($this->m_arrResultList)){
+		foreach($this->m_arrResultList as $objThreadHeader) {
 			$arrOutput[] = $objThreadHeader->getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp);
 		}
 		return $arrOutput;

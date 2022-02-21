@@ -170,7 +170,7 @@ class cMessageList extends cScrollList{
 		$arrReturn = array();
 
 		reset($this->m_arrResultList);
-		while(list(,$objBoardMessage) = each($this->m_arrResultList)){
+		foreach ($this -> m_arrResultList as $objBoardMessage) {
 			$arrReturn[] = $objBoardMessage->getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$sSubjectQuotePrefix,$objParser);
 		}
 		return $arrReturn;

@@ -63,7 +63,7 @@ class cAdminActionMessageform extends cAdminAction{
 			$this->m_sOutput .= "<tr><td colspan=\"2\" id=\"h\">delete threads / messages</td></tr>\n";
 			$this->m_sOutput .= "<tr><td rowspan=\"".(sizeof($arrBoards)+1)."\" align=\"center\">delete threads &amp; messages in </td><td>";
 
-			while(list(,$arrVal)=each($arrBoards)){
+			foreach($arrBoards as $arrVal) {
 				$this->m_sOutput .= "<input type=\"checkbox\" name=\"brds[]\" value=\"".$arrVal["id"]."\" checked> ".htmlspecialchars($arrVal["name"])."</td></tr>\n<tr><td>";
 			}
 

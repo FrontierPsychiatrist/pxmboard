@@ -68,7 +68,7 @@ class cTemplateSmarty extends cTemplate{
 		$this->_quoteSpecialCharsRecursive($arrData);
 
 		reset($arrData);
-		while(list($mKey,$mVal) = each($arrData)){
+		foreach ($arrData as $mKey => $mVal) {
 			$this->m_objSmarty->assign($mKey,$mVal);
 		}
 	}

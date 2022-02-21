@@ -61,7 +61,7 @@ class cTemplateXslt extends cTemplate{
 	 */
 	function _addDataRecursive(&$arrData,$sSubst = ""){
 		reset($arrData);
-		while(list($mKey,$mVal) = each($arrData)){
+		foreach($arrData as $mKey => $mVal) {
 			if(is_integer($mKey) && !empty($sSubst)){
 				$mKey = $sSubst;
 			}

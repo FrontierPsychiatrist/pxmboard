@@ -171,7 +171,7 @@ class cBoardList{
 
 		$arrOutput = array();
 		reset($this->m_arrBoards);
-		while(list(,$objBoard) = each($this->m_arrBoards)){
+		foreach($this->m_arrBoards as $objBoard) {
 			$arrOutput[] = $objBoard->getDataArray($iTimeOffset,$sDateFormat,$iLastOnlineTimestamp,$objParser);
 		}
 		return $arrOutput;
