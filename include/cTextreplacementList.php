@@ -37,7 +37,7 @@ class cTextreplacementList{
 	 * @param void
 	 * @return void
 	 */
-	function cTextreplacementList(){
+	function __construct(){
 	}
 
 	/**

@@ -46,7 +46,7 @@ class cThreadList extends cScrollList{
 	 * @param integer $iTimeSpan timespan
 	 * @return void
 	 */
-	function cThreadList($iBoardId,$sSortMode,$iTimeSpan){
+	function __construct($iBoardId, $sSortMode, $iTimeSpan){
 
 		$this->m_sSortDirection = "DESC";
 
@@ -71,7 +71,7 @@ class cThreadList extends cScrollList{
 		$this->m_iBoardId = intval($iBoardId);
 		$this->m_iTimeSpan = intval($iTimeSpan);
 
-		cScrollList::cScrollList();
+		parent::__construct();
 	}
 
 	/**

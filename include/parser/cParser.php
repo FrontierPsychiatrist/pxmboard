@@ -37,7 +37,7 @@ class cParser{
 	 * @param void
 	 * @return void
 	 */
-	function cParser(){
+	function __construct(){
 	}
 
 	/**

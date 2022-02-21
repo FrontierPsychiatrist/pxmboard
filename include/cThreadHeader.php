@@ -47,9 +47,9 @@ class cThreadHeader extends cMessageHeader{
 	 * @param void
 	 * @return void
 	 */
-	function cThreadHeader(){
+	function __construct(){
 
-		cMessageHeader::cMessageHeader();
+		parent::__construct();
 
 		$this->m_iBoardId = 0;
 		$this->m_iThreadId = 0;

@@ -49,7 +49,7 @@ class cThread{
 	 * @param void
 	 * @return void
 	 */
-	function cThread(){
+	function __construct(){
 
 		$this->m_iBoardId = 0;
 		$this->m_iId = 0;

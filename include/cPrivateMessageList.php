@@ -45,13 +45,13 @@ class cPrivateMessageList extends cScrollList{
 	 * @param string $sDateFormat date format
 	 * @return void
 	 */
-	function cPrivateMessageList($iUserId,$iTimeOffset = 0,$sDateFormat = ""){
+	function __construct($iUserId, $iTimeOffset = 0, $sDateFormat = ""){
 
 		$this->m_iUserId = intval($iUserId);
 		$this->m_iTimeOffset = intval($iTimeOffset);
 		$this->m_sDateFormat = $sDateFormat;
 
-		cScrollList::cScrollList();
+		parent::__construct();
 	}
 }
 ?>

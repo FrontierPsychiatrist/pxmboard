@@ -40,9 +40,9 @@ require_once(INCLUDEDIR."/actions/cAction.php");
 	 * @param object $objConfig configuration data of the board
 	 * @return void
 	 */
-	function cAdminAction(&$objConfig){
+	function __construct(&$objConfig){
 
-		cAction::cAction($objConfig);
+		parent::__construct($objConfig);
 		$this->m_sOutput = "";
 	}
 

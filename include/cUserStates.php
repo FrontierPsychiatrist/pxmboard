@@ -36,7 +36,7 @@ class cUserStates{
 	 * @param void
 	 * @return void
 	 */
-	function cUserStates(){
+	function __construct(){
 	}
 
 	/**

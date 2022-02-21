@@ -42,7 +42,7 @@ class cNotification{
 	 * @param void
 	 * @return void
 	 */
-	function cNotification(){
+	function __construct(){
 		$this->m_iId = 0;
 		$this->m_sMessage = "";
 		$this->m_sName = "";

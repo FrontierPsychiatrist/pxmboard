@@ -46,7 +46,7 @@ class cBanner{
 	 * @param void
 	 * @return void
 	 */
-	function cBanner(){
+	function __construct(){
 
 		$this->m_iId = 0;
 		$this->m_iBoardId = 0;

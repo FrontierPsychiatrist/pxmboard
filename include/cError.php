@@ -39,7 +39,7 @@ class cError{
 	 * @param integer $iErrorId error id
 	 * @return void
 	 */
-	function cError($iErrorId){
+	function __construct($iErrorId){
 		$this->m_iErrorId = intval($iErrorId);
 	}
 

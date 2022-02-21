@@ -40,11 +40,11 @@ class cUserSearchList extends cScrollList{
 	 * @param string $sNickName nickname
 	 * @return void
 	 */
-	function cUserSearchList($sNickName){
+	function __construct($sNickName){
 
 		$this->m_sNickName = $sNickName;
 
-		cScrollList::cScrollList();
+		parent::__construct();
 	}
 
 	/**

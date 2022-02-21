@@ -38,7 +38,7 @@ class cNotificationList{
 	 * @param void
 	 * @return void
 	 */
-	function cNotificationList(){
+	function __construct(){
 	}
 
 	/**

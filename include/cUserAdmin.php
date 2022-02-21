@@ -55,9 +55,9 @@ class cUserAdmin extends cUserProfile{
 	 * @param array $arrAddFields additional profile fields
 	 * @return void
 	 */
-	function cUserAdmin($arrAddFields = array()){
+	function __construct($arrAddFields = array()){
 
-		cUserProfile::cUserProfile($arrAddFields);
+		parent::__construct($arrAddFields);
 
 		$this->m_bPost = FALSE;
 		$this->m_bEdit = FALSE;

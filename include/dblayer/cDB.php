@@ -183,7 +183,7 @@ class cDBResultSet{
 	 * @param object $objConfig configuration data of the board
 	 * @return void
 	 */
-	function cDBResultSet($resResultSet){
+	function __construct($resResultSet){
 		$this->m_resResultSet = $resResultSet;
 	}
 

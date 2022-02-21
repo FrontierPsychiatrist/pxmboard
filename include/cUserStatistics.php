@@ -38,7 +38,7 @@ class cUserStatistics{
 	 * @param void
 	 * @return void
 	 */
-	function cUserStatistics(){
+	function __construct(){
 	}
 
 	/**

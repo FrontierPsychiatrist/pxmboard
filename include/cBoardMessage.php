@@ -44,9 +44,9 @@ class cBoardMessage extends cMessage{
 	 * @param void
 	 * @return void
 	 */
-	function cBoardMessage(){
+	function __construct(){
 
-		cMessage::cMessage();
+		parent::__construct();
 
 		$this->m_iBoardId = 0;
 		$this->m_iThreadId = 0;

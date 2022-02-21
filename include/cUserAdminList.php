@@ -45,13 +45,13 @@ class cUserAdminList extends cScrollList{
 	 * @param string $sSortDirection sort direction
 	 * @return void
 	 */
-	function cUserAdminList($iUserStateFilter,$sSortAttribute,$sSortDirection){
+	function __construct($iUserStateFilter, $sSortAttribute, $sSortDirection){
 
 		$this->m_iUserStateFilter = intval($iUserStateFilter);
 		$this->m_sSortAttribute = $sSortAttribute;
 		$this->m_sSortDirection = $sSortDirection;
 
-		cScrollList::cScrollList();
+		parent::__construct();
 	}
 
 	/**

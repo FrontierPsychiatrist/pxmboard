@@ -36,7 +36,7 @@ class cSession{
 	 * @param string $sSessionName name of the session / cookie name
 	 * @return void
 	 */
-	function cSession($sSessionName){
+	function __construct($sSessionName){
 		session_name($sSessionName);
 
 		// security: bind this session to this instance of the script!!!

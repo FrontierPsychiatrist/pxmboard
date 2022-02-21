@@ -40,9 +40,9 @@ class cTemplateXslt extends cTemplate{
 	 * @param string $sSkinDir skin directory
 	 * @return void
 	 */
-	function cTemplateXslt($sSkinDir){
+	function __construct($sSkinDir){
 
-		cTemplate::cTemplate($sSkinDir);
+		parent::__construct($sSkinDir);
 		$this->m_sTemplateExtension = ".xsl";
 
 		$this->m_sXmlDoc = 	 "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n"

@@ -44,7 +44,7 @@ require_once(INCLUDEDIR."/templatelayer/cTemplateFactory.php");
 	 * @param object $objConfig configuration data of the board
 	 * @return void
 	 */
-	function cAction(&$objConfig){
+	function __construct(&$objConfig){
 		$this->m_objConfig = &$objConfig;
 		$this->m_objTemplate = NULL;
 		$this->m_objInputHandler = new cInputHandler();

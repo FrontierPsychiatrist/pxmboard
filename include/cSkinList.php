@@ -38,7 +38,7 @@ class cSkinList{
 	 * @param void
 	 * @return void
 	 */
-	function cSkinList(){
+	function __construct(){
 	}
 
 	/**

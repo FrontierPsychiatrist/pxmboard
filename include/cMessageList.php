@@ -44,12 +44,12 @@ class cMessageList extends cScrollList{
 	 * @param integer $iThreadId thread id
 	 * @return void
 	 */
-	function cMessageList($iBoardId,$iThreadId){
+	function __construct($iBoardId, $iThreadId){
 
 		$this->m_iBoardId = intval($iBoardId);
 		$this->m_iThreadId = intval($iThreadId);;
 
-		cScrollList::cScrollList();
+		parent::__construct();
 	}
 
 	/**

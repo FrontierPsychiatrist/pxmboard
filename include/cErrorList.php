@@ -37,7 +37,7 @@ class cErrorList{
 	 * @param void
 	 * @return void
 	 */
-	function cErrorList(){
+	function __construct(){
 	}
 
 	/**

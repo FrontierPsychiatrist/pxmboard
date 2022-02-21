@@ -43,9 +43,9 @@ class cPrivateMessage extends cMessage{
 	 * @param void
 	 * @return void
 	 */
-	function cPrivateMessage(){
+	function __construct(){
 
-		cMessage::cMessage();
+		parent::__construct();
 
 		$this->m_iToUserId = 0;
 		$this->m_iToState = cMessageStates::messageNew();

@@ -40,7 +40,7 @@ class cBoardList{
 	 * @param void
 	 * @return void
 	 */
-	function cBoardList(){
+	function __construct(){
 		$this->m_arrBoards = array();
 	}
 

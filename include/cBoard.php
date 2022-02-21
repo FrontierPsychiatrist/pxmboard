@@ -53,7 +53,7 @@ class cBoard{
 	 * @param void
 	 * @return void
 	 */
-	function cBoard(){
+	function __construct(){
 
 		$this->m_iId = 0;
 		$this->m_sName = "";

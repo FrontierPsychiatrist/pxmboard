@@ -41,7 +41,7 @@ class cInputHandler{
 	 * @param void
 	 * @return void
 	 */
-	function cInputHandler(){
+	function __construct(){
 		$this->m_objStringValidations = new cStringValidations();
 	}
 

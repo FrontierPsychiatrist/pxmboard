@@ -37,7 +37,7 @@ class cBadwordList{
 	 * @param void
 	 * @return void
 	 */
-	function cBadwordList(){
+	function __construct(){
 	}
 
 	/**

@@ -45,7 +45,7 @@ class cScrollList{
 	 * @param void
 	 * @return void
 	 */
-	function cScrollList(){
+	function __construct(){
 
 		$this->m_arrResultList = array();
 		$this->m_iPrevPageId = 0;

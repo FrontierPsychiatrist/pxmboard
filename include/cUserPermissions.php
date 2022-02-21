@@ -44,9 +44,9 @@ class cUserPermissions extends cUser{
 	 * @param void
 	 * @return void
 	 */
-	function cUserPermissions(){
+	function __construct(){
 
-		cUser::cUser();
+		parent::__construct();
 
 		$this->m_bPost = FALSE;
 		$this->m_bEdit = FALSE;

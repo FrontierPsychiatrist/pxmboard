@@ -37,7 +37,7 @@ class cForbiddenMailList{
 	 * @param void
 	 * @return void
 	 */
-	function cForbiddenMailList(){
+	function __construct(){
 	}
 
 	/**

@@ -45,7 +45,7 @@ class cSearchProfile{
 	 * @param void
 	 * @return void
 	 */
-	function cSearchProfile(){
+	function __construct(){
 		$this->m_iId = 0;
 		$this->m_iIdUser = 0;
 		$this->m_sSearchMessage = "";

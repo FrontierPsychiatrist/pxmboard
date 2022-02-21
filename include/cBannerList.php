@@ -38,7 +38,7 @@ class cBannerList{
 	 * @param void
 	 * @return void
 	 */
-	function cBannerList(){
+	function __construct(){
 	}
 
 	/**

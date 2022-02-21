@@ -36,7 +36,7 @@ class cMessageStates{
 	 * @param void
 	 * @return void
 	 */
-	function cMessageStates(){
+	function __construct(){
 	}
 
 	/**

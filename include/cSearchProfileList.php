@@ -40,7 +40,7 @@ class cSearchProfileList{
 	 * @param void
 	 * @return void
 	 */
-	function cSearchProfileList(){
+	function __construct(){
 		$this->m_arrSearchProfiles = array();
 	}
 

@@ -55,7 +55,7 @@ class cUser{
 	 * @param void
 	 * @return void
 	 */
-	function cUser(){
+	function __construct(){
 
 		$this->m_iId = 0;
 		$this->m_sNickName = "";

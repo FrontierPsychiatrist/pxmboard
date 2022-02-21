@@ -37,7 +37,7 @@ class cProfileConfig{
 	 * @param void
 	 * @return void
 	 */
-	function cProfileConfig(){
+	function __construct(){
 	}
 
 	/**

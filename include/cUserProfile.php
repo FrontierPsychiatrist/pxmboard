@@ -42,9 +42,9 @@ class cUserProfile extends cUser{
 	 * @param array $arrAddFields additional profile fields
 	 * @return void
 	 */
-	function cUserProfile($arrAddFields = array()){
+	function __construct($arrAddFields = array()){
 
-		cUser::cUser();
+		parent::__construct();
 
 		$this->m_iLastUpdateTimestap = 0;
 		$this->m_arrAddFields = &$arrAddFields;

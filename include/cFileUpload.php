@@ -39,7 +39,7 @@ class cFileUpload{
 	 * @param string $sFileVarName name of the file variable
 	 * @return void
 	 */
-	function cFileUpload($sFileVarName){
+	function __construct($sFileVarName){
 		$this->m_sFileVarName = $sFileVarName;
 	}
 

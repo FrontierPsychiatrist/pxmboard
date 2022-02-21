@@ -84,7 +84,7 @@ class cConfig{
 	 * @param string $arrTemplateEngines available template engine ordered by priority
 	 * @return void
 	 */
-	function cConfig(&$objActiveBoard,&$arrTemplateEngines){
+	function __construct(&$objActiveBoard, &$arrTemplateEngines){
 
 		$this->m_objActiveBoard = &$objActiveBoard;
 

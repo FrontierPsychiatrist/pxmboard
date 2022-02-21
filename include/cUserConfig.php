@@ -49,9 +49,9 @@ class cUserConfig extends cUserPermissions{
 	 * @param void
 	 * @return void
 	 */
-	function cUserConfig(){
+	function __construct(){
 
-		cUserPermissions::cUserPermissions();
+		parent::__construct();
 
 		$this->m_bIsVisible	= TRUE;
 		$this->m_iSkinId = 0;

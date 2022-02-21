@@ -41,9 +41,9 @@ class cTemplateSmarty extends cTemplate{
 	 * @param string $sSkinDir skin directory
 	 * @return void
 	 */
-	function cTemplateSmarty($sSkinDir){
+	function __construct($sSkinDir){
 
-		cTemplate::cTemplate($sSkinDir);
+		parent::__construct($sSkinDir);
 		$this->m_sTemplateExtension = ".tpl";
 
 		$this->m_objSmarty = new Smarty();

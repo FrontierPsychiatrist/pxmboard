@@ -41,7 +41,7 @@
 	 * @param string $sSkinDir skin directory
 	 * @return void
 	 */
-	function cTemplate($sSkinDir){
+	function __construct($sSkinDir){
 
 		$this->m_sSkinDir = $sSkinDir;
 		$this->m_sTemplateName = "";

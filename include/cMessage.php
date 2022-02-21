@@ -41,9 +41,9 @@ class cMessage extends cMessageHeader{
 	 * @param void
 	 * @return void
 	 */
-	function cMessage(){
+	function __construct(){
 
-		cMessageHeader::cMessageHeader();
+		parent::__construct();
 
 		$this->m_sBody = "";
 		$this->m_sIp = "";

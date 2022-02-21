@@ -36,7 +36,7 @@ class cTemplateFactory{
 	 * @param  void
 	 * @return void
      */
-	function cTemplateFactory(){
+	function __construct(){
 	}
 
 	/**

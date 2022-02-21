@@ -38,7 +38,7 @@ class cMessageStatistics{
 	 * @param void
 	 * @return void
 	 */
-	function cMessageStatistics(){
+	function __construct(){
 	}
 
 	/**

@@ -42,12 +42,12 @@ class cUserOnlineList extends cScrollList{
 	 * @param integer $iOnlineTimestamp online timestamp
 	 * @return void
 	 */
-	function cUserOnlineList($bAdminMode,$iOnlineTimestamp){
+	function __construct($bAdminMode, $iOnlineTimestamp){
 
 		$this->m_bAdminMode = $bAdminMode?TRUE:FALSE;
 		$this->m_iOnlineTimestamp = intval($iOnlineTimestamp);
 
-		cScrollList::cScrollList();
+		parent::__construct();
 	}
 
 	/**

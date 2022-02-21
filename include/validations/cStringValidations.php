@@ -39,7 +39,7 @@ class cStringValidations{
 	 * @param void
 	 * @return void
 	 */
-	function cStringValidations(){
+	function __construct(){
 
 		$this->m_arrStringLegth = array("boardmode" 		=> 30,
 										"boardname" 		=> 100,

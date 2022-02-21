@@ -49,7 +49,7 @@ class cMessageSearchList extends cScrollList{
 	 * @param string $sDateFormat date format
 	 * @return void
 	 */
-	function cMessageSearchList(&$objSearch,$iTimeOffset,$sDateFormat){
+	function __construct(&$objSearch, $iTimeOffset, $sDateFormat){
 
 		$this->m_arrBoardIds = array();
 		foreach($objSearch->getBoardIds() as $iBoardId){
@@ -65,7 +65,7 @@ class cMessageSearchList extends cScrollList{
 		$this->m_iTimeOffset = intval($iTimeOffset);
 		$this->m_sDateFormat = $sDateFormat;
 
-		cScrollList::cScrollList();
+		parent::__construct();
 	}
 
 	/**

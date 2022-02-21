@@ -41,7 +41,8 @@ class cMessageQuoteParser extends cParser{
 	 * @param void
 	 * @return void
 	 */
-	function cMessageQuoteParser(){
+	function __construct(){
+        parent::__construct();
 		$this->m_arrReplacements = array("search"=>array(),"replace"=>array());
 		$this->m_cQuoteChar = "";
 	}
