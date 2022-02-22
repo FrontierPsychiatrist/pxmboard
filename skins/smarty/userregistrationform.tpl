@@ -21,7 +21,7 @@
 	<td id="norm">email</td><td id="input"><input type="text" name="email" vcard_name="vCard.Email" size="30" maxlength="100"/></td>
 </tr>
 <tr class="bg1">
-	<td colspan="2" align="center" id="header">zusätzliche informationen</td>
+	<td colspan="2" align="center" id="header">zusÃ¤tzliche informationen</td>
 </tr>
 <tr class="bg2">
 	<td id="norm">vorname</td><td id="input"><input type="text" name="fname" vcard_name="vCard.FirstName" size="30" maxlength="30"/></td>
@@ -33,7 +33,7 @@
 	<td id="norm">wohnort</td><td id="input"><input type="text" name="city" vcard_name="vCard.Home.City" size="30" maxlength="30"/></td>
 </tr>
 <tr class="bg2">
-	<td id="norm">öffentliche email</td><td id="input"><input type="text" name="pubemail" size="30" maxlength="100"/></td>
+	<td id="norm">Ã¶ffentliche email</td><td id="input"><input type="text" name="pubemail" size="30" maxlength="100"/></td>
 </tr>
 <tr class="bg2">
 	<td id="norm">homepage</td><td id="input"><input type="text" name="url" vcard_name="vCard.Homepage" size="30" maxlength="50"/></td>

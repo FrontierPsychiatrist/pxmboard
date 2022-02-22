@@ -8,10 +8,10 @@
 <center>
 <table cellspacing="0" cellpadding="5" border="0">
 <tr class="bg1">
-	<td align="center" id="header">forum : bestätigung</td>
+	<td align="center" id="header">forum : bestÃ¤tigung</td>
 </tr>
 <tr class="bg2">
-	<td id="norm">vielen dank für ihre anmeldung</td>
+	<td id="norm">vielen dank fÃ¼r ihre anmeldung</td>
 </tr>
 <tr class="bg2">
 	<td id="norm">sie sind nun als {$user.nickname} angemeldet.</td>

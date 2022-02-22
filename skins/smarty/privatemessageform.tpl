@@ -29,7 +29,7 @@
 	</tr>
 {/foreach}
 <tr class="bg1">
-	<td id="header" colspan="2" align="center">board: private nachricht für {$touser.nickname}</td>
+	<td id="header" colspan="2" align="center">board: private nachricht fÃ¼r {$touser.nickname}</td>
 </tr>
 <tr class="bg2">
 	<td id="norm">thema</td><td id="input"><input type="text" size="28" maxlength="50" name="subject" value="{$msg.subject}" tabindex="30001"/></td>

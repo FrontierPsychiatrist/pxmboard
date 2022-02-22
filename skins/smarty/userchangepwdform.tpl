@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>-= board: passwort ändern =-</title>
+	<title>-= board: passwort Ã¤ndern =-</title>
 	<link rel="stylesheet" type="text/css" href="css/pxmboard.css"/>
 </head>
 <body>
@@ -17,7 +17,7 @@
 </table>
 <table cellspacing="2" cellpadding="5" border="0" width="480">
 <tr class="bg1">
-	<td colspan="2" align="center" id="header">board: passwort ändern für {$config.user.nickname}</td>
+	<td colspan="2" align="center" id="header">board: passwort Ã¤ndern fÃ¼r {$config.user.nickname}</td>
 </tr>
 <tr class="bg2">
 	<td id="norm">neues passwort 1</td><td id="input"><input type="password" name="pwd" size="20" maxlength="20"/></td>

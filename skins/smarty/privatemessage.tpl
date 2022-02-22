@@ -42,7 +42,7 @@
 	</td>
 </tr>
 <tr class="bg1">
-	<td colspan="2" align="center" id="norm">&lt; <a href="pxmboard.php?mode=privatemessagelist&type={$config.type}{$config.sid}">zurück</a> | {if $config.type == 'inbox'}<a href="pxmboard.php?mode=privatemessageform&type=outbox&toid={$msg.user.id}&pmsgid={$msg.id}{$config.sid}">auf diese nachricht antworten</a> | {/if}<a href="#" onclick="delmsg(); return false;">nachricht löschen</a> &gt;</td>
+	<td colspan="2" align="center" id="norm">&lt; <a href="pxmboard.php?mode=privatemessagelist&type={$config.type}{$config.sid}">zurÃ¼ck</a> | {if $config.type == 'inbox'}<a href="pxmboard.php?mode=privatemessageform&type=outbox&toid={$msg.user.id}&pmsgid={$msg.id}{$config.sid}">auf diese nachricht antworten</a> | {/if}<a href="#" onclick="delmsg(); return false;">nachricht lÃ¶schen</a> &gt;</td>
 </tr>
 </table>
 </body>

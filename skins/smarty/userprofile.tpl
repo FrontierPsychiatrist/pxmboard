@@ -7,7 +7,7 @@
 <body>
 <table cellspacing="2" cellpadding="5" border="0" width="480">
 <tr class="bg1">
-	<td colspan="3" align="center" id="header">board: userprofil für {$user.nickname}
+	<td colspan="3" align="center" id="header">board: userprofil fÃ¼r {$user.nickname}
 	{if $user.status != 1} (gesperrt){/if}
 	</td>
 </tr>

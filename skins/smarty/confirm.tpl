@@ -8,10 +8,10 @@
 <center>
 <table cellspacing="0" cellpadding="5" border="0">
 <tr class="bg1">
-	<td align="center" id="header">forum : bestätigung</td>
+	<td align="center" id="header">forum : bestÃ¤tigung</td>
 </tr>
 <tr class="bg2">
-	<td id="norm">Die Aktion wurde erfolgreich ausgeführt</td>
+	<td id="norm">Die Aktion wurde erfolgreich ausgefÃ¼hrt</td>
 </tr>
 <tr class="bg1">
 	<td align="center" id="norm"><a href="mailto:{$config.webmaster}">mail webmaster</a></td>

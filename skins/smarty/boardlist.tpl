@@ -75,7 +75,7 @@
 {/foreach}
 
 {if $config.admin == 1}
-	<tr class="bg1"><td id="norm" align="center" colspan="6">&lt; <a href="pxmboard.php?mode=admboardform{$config.sid}" target="admin">board hinzufügen</a> | <a href="pxmboard.php?mode=admframe{$config.sid}" target="admin">weitere Funktionen</a> ></td></tr>
+	<tr class="bg1"><td id="norm" align="center" colspan="6">&lt; <a href="pxmboard.php?mode=admboardform{$config.sid}" target="admin">board hinzufÃ¼gen</a> | <a href="pxmboard.php?mode=admframe{$config.sid}" target="admin">weitere Funktionen</a> ></td></tr>
 {/if}
 {if $config.logedin == 0}
 <form action="pxmboard.php" method="post">

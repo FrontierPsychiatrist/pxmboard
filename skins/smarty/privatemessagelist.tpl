@@ -43,7 +43,7 @@
 {else}
 	- |
 {/if}
-{if $msg}<a href="#" onclick="delmsg(); return false;">alle nachrichten löschen</a> |{/if}
+{if $msg}<a href="#" onclick="delmsg(); return false;">alle nachrichten lÃ¶schen</a> |{/if}
 {if $config.nextid != ''}
 	<a href="pxmboard.php?mode=privatemessagelist&type={$config.type}&page={$config.nextid}{$config.sid}">next</a>
 {else}

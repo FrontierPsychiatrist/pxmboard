@@ -18,10 +18,10 @@
 </table>
 <table cellspacing="2" cellpadding="5" border="0" width="480">
 <tr class="bg1">
-	<td align="center" id="header">forum: bestätigung</td>
+	<td align="center" id="header">forum: bestÃ¤tigung</td>
 </tr>
 <tr class="bg2">
-	<td align="center" id="norm">ihre private nachrichte(n) wurde(n) gelöscht - vielen dank</td>
+	<td align="center" id="norm">ihre private nachrichte(n) wurde(n) gelÃ¶scht - vielen dank</td>
 </tr>
 <tr class="bg1">
 	<td align="center" id="norm"><a href="mailto:{$config.webmaster}">mail webmaster</a></td>

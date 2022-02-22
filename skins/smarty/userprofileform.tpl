@@ -17,7 +17,7 @@
 </table>
 <table cellspacing="2" cellpadding="5" border="0" width="480">
 <tr class="bg1">
-	<td colspan="2" align="center" id="header">board: userprofil für {$user.nickname}</td>
+	<td colspan="2" align="center" id="header">board: userprofil fÃ¼r {$user.nickname}</td>
 </tr>
 <tr class="bg2">
 	<td id="norm">vorname</td><td id="input"><input type="text" name="fname" value="{$user.fname}" size="30" maxlength="30"/></td>
@@ -44,7 +44,7 @@
 	<td id="norm">signatur</td><td id="input"><textarea cols="29" rows="3" name="signature" wrap="physical">{$user._signature}</textarea></td>
 </tr>
 <tr class="bg2" valign="top">
-	<td id="norm">bild</td><td id="input"><input type="file" name="pic" size="18" maxlength="150"/><br><input type="checkbox" name="delpic" value="1"/> bild löschen?</td>
+	<td id="norm">bild</td><td id="input"><input type="file" name="pic" size="18" maxlength="150"/><br><input type="checkbox" name="delpic" value="1"/> bild lÃ¶schen?</td>
 </tr>
 <tr class="bg1">
 	<td id="norm" colspan="2" align="center"><input type="submit" value="abschicken"/></td>

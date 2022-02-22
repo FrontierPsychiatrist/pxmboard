@@ -8,7 +8,7 @@
 <center>
 <table cellspacing="0" cellpadding="5" border="0">
 <tr class="bg1">
-	<td align="center" id="header">forum : bestätigung</td>
+	<td align="center" id="header">forum : bestÃ¤tigung</td>
 </tr>
 <tr class="bg2">
 	<td id="norm">ihr passwort wurde an ihre interne mailadresse verschickt</td>

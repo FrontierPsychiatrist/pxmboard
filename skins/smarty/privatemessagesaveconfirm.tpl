@@ -18,7 +18,7 @@
 </table>
 <table cellspacing="2" cellpadding="5" border="0" width="480">
 <tr class="bg1">
-	<td align="center" id="header">forum: best‰tigung</td>
+	<td align="center" id="header">forum: best√§tigung</td>
 </tr>
 <tr class="bg2">
 	<td align="center" id="norm">ihre nachricht wurde abgeschickt - vielen dank</td>

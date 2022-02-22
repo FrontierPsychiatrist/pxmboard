@@ -17,7 +17,7 @@
 </table>
 <table cellspacing="2" cellpadding="5" border="0" width="480">
 <tr class="bg1">
-	<td colspan="2" align="center" id="header">board: userconfig für {$user.nickname}</td>
+	<td colspan="2" align="center" id="header">board: userconfig fÃ¼r {$user.nickname}</td>
 </tr>
 <tr class="bg2">
 	<td id="norm">skin</td><td id="input"><select name="skinid" size="1">
@@ -64,7 +64,7 @@
 	<td id="input"><input type="checkbox" name="visible" value="1"{if $user.visible == 1} checked="checked"{/if}/></td>
 </tr>
 <tr class="bg2">
-	<td id="norm">benachrichtigung über neue private nachrichten per email?</td>
+	<td id="norm">benachrichtigung Ã¼ber neue private nachrichten per email?</td>
 	<td id="input"><input type="checkbox" name="privnotification" value="1"{if $user.privnotification == 1} checked="checked"{/if}/></td>
 </tr>
 <tr class="bg2">
