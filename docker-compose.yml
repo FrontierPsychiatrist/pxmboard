@@ -22,5 +22,7 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
       - ./install/sql/pxmboard-mysql.sql:/docker-entrypoint-initdb.d/pxmboard-mysql.sql
+    ports:
+      - "3306:3306"
 volumes:
   mariadb:
