@@ -77,6 +77,7 @@ else{
 <tr><td colspan="2" id="h">Template Configuration</td></tr>
 <tr><td rowspan="3">Template Types</td>	<td><input type="checkbox" name="templatetype[]" value="Smarty" checked="checked"> Smarty</td></tr>
 <tr>									<td><input type="checkbox" name="templatetype[]" value="Xslt" <?php echo getCheckboxStateString(array("domxml","xsl"))?>> Xslt</td></tr>
+<tr>									<td><input type="checkbox" name="templatetype[]" value="Json"> JSON</td></tr>
 </table>
 <br>
 <br>

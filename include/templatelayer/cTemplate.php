@@ -111,5 +111,12 @@
 	function getOutput(){
 		return "";
 	}
+
+	/**
+	 * get the content type of this template
+	 */
+	function getContentType(): string{
+		return "text/html";
+	}
 }
 ?>

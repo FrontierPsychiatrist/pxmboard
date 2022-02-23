@@ -171,14 +171,17 @@ class cConfig{
 	 *
 	 * @author Torsten Rentsch <forum@torsten-rentsch.de>
 	 * @access private
+	 * @param int $iOverrideSkinId Override the selected skin with this id (if not zero)
 	 * @param void
 	 * @return boolean success / failure
 	 */
-	function initSkin(){
+	function initSkin(int $iOverrideSkinId = 0){
 
 		$bReturn = TRUE;
 
-		if(is_object($this->m_objActiveUser) && $this->m_objActiveUser->getSkinId()>0){
+		if ($iOverrideSkinId != 0) {
+			$iSkinId = $iOverrideSkinId;
+		} else if(is_object($this->m_objActiveUser) && $this->m_objActiveUser->getSkinId()>0){
 			$iSkinId = $this->m_objActiveUser->getSkinId();
 		}
 		else{

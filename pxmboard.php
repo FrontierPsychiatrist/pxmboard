@@ -109,7 +109,8 @@ $objAction->loginUserByTicket();
 // execute the pre-actions
 $objAction->doPreActions();
 // initialize the skin
-if(!$bAdmin && !$objConfig->initSkin()){
+$iOverrideSkinId = $objInputHandler -> getIntFormVar("skin_id", false, true);
+if(!$bAdmin && !$objConfig->initSkin($iOverrideSkinId)){
 	die("no valid template found");
 }
 // do the action
@@ -121,6 +122,7 @@ $objAction->doPostActions();
 $objSesion = &$objConfig->getSession();
 $objSesion->writeCloseSession();
 
+header("content-type: " . $objAction->getContentType());
 // output the result
 echo $objAction->getOutput();
 ?>

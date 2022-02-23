@@ -181,5 +181,16 @@ require_once(INCLUDEDIR."/templatelayer/cTemplateFactory.php");
 		$objTemplate->addData($dummy = array("error"=>$objError->getDataArray()));
 		return $objTemplate;
 	}
+
+	/**
+	 * get the content type of the output
+	 */
+	function getContentType(): string{
+		if (is_object($this->m_objTemplate)) {
+			return $this->m_objTemplate->getContentType();
+		} else {
+			return "text/plain";
+		}
+	}
 }
 ?>

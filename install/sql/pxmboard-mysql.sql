@@ -240,7 +240,18 @@ INSERT INTO `pxm_skin` (`s_id`, `s_fieldname`, `s_fieldvalue`) VALUES
 (2, 'tgfx_lastc', '<img src="images/lc.gif" width="8" height="22" border="0"/>'),
 (2, 'tgfx_midc', '<img src="images/mc.gif" width="8" height="22" border="0"/>'),
 (2, 'tgfx_noc', '<img src="images/nc.gif" width="8" height="22" border="0"/>'),
-(2, 'tgfx_empty', '<img src="images/empty.gif" width="8" height="22" border="0"/>');
+(2, 'tgfx_empty', '<img src="images/empty.gif" width="8" height="22" border="0"/>'),
+(3, 'name', 'JSON Template'),
+(3, 'dir', 'pxm'),
+(3, 'type', 'Json'),
+(3, 'frame_top', '40'),
+(3, 'frame_bottom', '40'),
+(3, 'quoteprefix', '<font color="#808080">'),
+(3, 'quotesuffix', '</font>'),
+(3, 'tgfx_lastc', '<img src="images/lc.gif" width="8" height="22" border="0"/>'),
+(3, 'tgfx_midc', '<img src="images/mc.gif" width="8" height="22" border="0"/>'),
+(3, 'tgfx_empty', '<img src="images/empty.gif" width="8" height="22" border="0"/>'),
+(3, 'tgfx_noc', '<img src="images/nc.gif" width="8" height="22" border="0"/>');;
 # --------------------------------------------------------
 
 CREATE TABLE `pxm_textreplacement` (
