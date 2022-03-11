@@ -24,5 +24,17 @@ services:
       - ./install/sql/pxmboard-mysql.sql:/docker-entrypoint-initdb.d/pxmboard-mysql.sql
     ports:
       - "3306:3306"
+  postgres:
+    image: postgres:14.2
+    environment:
+      POSTGRES_DB: pxmboard
+      POSTGRES_USER: pxmboard
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - ./install/sql/pxmboard-postgres.sql:/docker-entrypoint-initdb.d/pxmobard-postgres.sql
+    ports:
+      - "5432:5434"
 volumes:
   mariadb:
+  postgres:
